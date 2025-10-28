@@ -22,7 +22,7 @@ resource "null_resource" "exp" {
     always_run = true
   }
   provisioner "local-exec" {
-    command = "sleep 20 ; cd /home/ec2-user/Ansible/ALL_ENV_Ansible ; ansible-playbook -i inv-dev  -e ansible_user=ec2-user -e ansible_password=DevOps321 -e COMP=${var.name} -e env=dev -e pwd=ExpenseApp@1 expense.yml"
+    command = "sleep 20 ; cd /home/ec2-user/Ansible/APrometheus ; ansible-playbook -i inv-dev  -e ansible_user=ec2-user -e ansible_password=DevOps321 -e COMP=${var.name} -e env=dev -e pwd=ExpenseApp@1 expense.yml"
   } #${aws_instance.Expenes.private_ip},
 }
 
